@@ -18,7 +18,7 @@ open class SpringBootObjectMapper {
     open fun objectMapper(): ObjectMapper {
         val module = SimpleModule()
             .addDeserializer(ProductType::class.java, ProductTypeDeserializer())
-            .addDeserializer(String::class.java, StrictStringDeserializer());
+            .addDeserializer(String::class.java, StrictStringDeserializer())
 
         val mapper = ObjectMapper()
         module.addDeserializer(ProductType::class.java, ProductTypeDeserializer())

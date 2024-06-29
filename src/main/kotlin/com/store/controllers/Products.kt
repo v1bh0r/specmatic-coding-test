@@ -2,7 +2,6 @@ package com.store.controllers
 
 import com.store.entities.ProductEntity
 import com.store.repositories.ProductRepository
-import jakarta.validation.Valid
 import org.openapitools.api.ProductsApi
 import org.openapitools.model.Product
 import org.openapitools.model.ProductDetails
