@@ -28,7 +28,7 @@ data class ProductEntity(
     var inventory: Int? = null,
 
     @Column(nullable = false)
-    var cost: BigDecimal? = null
+    var cost: Double? = null
 ) {
     constructor(product: Product) : this(
         id = product.id,

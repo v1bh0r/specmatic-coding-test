@@ -87,6 +87,8 @@ components:
           maximum: 9999
         cost:
           type: number
+          format: double
+          minimum: 0.01
       required:
         - name
         - type
