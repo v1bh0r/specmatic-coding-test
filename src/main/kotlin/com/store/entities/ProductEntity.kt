@@ -1,10 +1,11 @@
 package com.store.entities
 
-import org.openapitools.model.Product
-import org.openapitools.model.ProductType
 import jakarta.persistence.*
 import jakarta.validation.constraints.Max
 import jakarta.validation.constraints.Min
+import org.openapitools.model.Product
+import org.openapitools.model.ProductType
+import java.math.BigDecimal
 
 @Entity
 @Table(name = "products")
@@ -24,13 +25,17 @@ data class ProductEntity(
     @Min(1)
     @Max(9999)
     @Column(nullable = false)
-    var inventory: Int? = null
+    var inventory: Int? = null,
+
+    @Column(nullable = false)
+    var cost: BigDecimal? = null
 ) {
     constructor(product: Product) : this(
         id = product.id,
         name = product.name,
         type = product.type,
-        inventory = product.inventory
+        inventory = product.inventory,
+        cost = product.cost
     )
 
     fun toProduct(): Product {
@@ -38,7 +43,8 @@ data class ProductEntity(
             id = id!!,
             name = name!!,
             type = type!!,
-            inventory = inventory!!
+            inventory = inventory!!,
+            cost = cost!!
         )
     }
 }

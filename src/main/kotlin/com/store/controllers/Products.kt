@@ -23,7 +23,8 @@ open class Products(private val productRepository: ProductRepository) : Products
             id = 0, // Hibernate will generate the ID
             name = productDetails!!.name,
             type = productDetails.type,
-            inventory = productDetails.inventory
+            inventory = productDetails.inventory,
+            cost = productDetails.cost
         )
         val productEntity = ProductEntity(product)
         val savedProduct = productRepository.save(productEntity)
