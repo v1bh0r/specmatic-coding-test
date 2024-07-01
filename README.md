@@ -1,5 +1,5 @@
 # Specmatic Coding Test
-
+[![CI Pipeline](https://github.com/v1bh0r/specmatic-coding-test/actions/workflows/maven.yml/badge.svg)](https://github.com/v1bh0r/specmatic-coding-test/actions/workflows/maven.yml)
 ### Prerequisites:
 JDK 17+ OR Specmatic IDE Plugin
 
